@@ -17,20 +17,20 @@ begin
         if rising_edge(clk) then
             case ao is
                 when "0000000" => --initial
-                    ao <= "0011111";
-                when "0011111" => --b
-                    if swap = '0' then ao <= "1110111"; --a
-                    elsif swap = '1' then ao <= "1001111"; --e
+                    ao <= "1100000";
+                when "1100000" => --b
+                    if swap = '0' then ao <= "0001000"; --a
+                    elsif swap = '1' then ao <= "0110000"; --e
                     end if;
-                when "1110111" => --a
-                    ao <= "0111101"; --d
-                when "0111101" => --d
-                    if swap = '0' then ao <= "1001111"; --e
-                    elsif swap = '1' then ao <= "0011111"; --b
+                when "0001000" => --a
+                    ao <= "1000010"; --d
+                when "1000010" => --d
+                    if swap = '0' then ao <= "0110000"; --e
+                    elsif swap = '1' then ao <= "1100000"; --b
                     end if;
-                when "1001111" => --e
-                    if swap = '0' then ao <= "0011111";
-                    elsif swap = '1' then ao <= "1110111";
+                when "0110000" => --e
+                    if swap = '0' then ao <= "1100000";
+                    elsif swap = '1' then ao <= "0001000";
                     end if;
                 when others =>
                     ao <= "0000000";
