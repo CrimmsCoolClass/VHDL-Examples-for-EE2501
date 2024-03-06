@@ -26,7 +26,7 @@ begin
             count <= Q;
         elsif rising_edge(clk) and enable = '0' then
             if ud = '0' then --counts up
-                count <= std_logic_vector(unsigned(cont) + 1); --type conversion to be able to add 1 to vector
+                count <= std_logic_vector(unsigned(count) + 1); --type conversion to be able to add 1 to vector
                 -- first it converts count to an unsigned integer, then it adds 1, then it converts the integer back to vector
             elsif ud = '1' then --counts down
                 count <= std_logic_vector(unsigned(count) - 1);
