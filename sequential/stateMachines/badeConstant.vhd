@@ -11,10 +11,10 @@ end statemachine;
 
 architecture behavior of statemachine is
     constant initial: std_logic_vector(6 downto 0) := "0000000";
-    constant B: std_logic_vector(6 downto 0) := "0011111";
-    constant A: std_logic_vector(6 downto 0) := "1110111";
-    constant D: std_logic_vector(6 downto 0) := "0111101";
-    constant E: std_logic_vector(6 downto 0) := "1001111";
+    constant B: std_logic_vector(6 downto 0) := "1100000";
+    constant A: std_logic_vector(6 downto 0) := "0001000";
+    constant D: std_logic_vector(6 downto 0) := "1000010";
+    constant E: std_logic_vector(6 downto 0) := "0110000";
 begin
 
     process(clk, swap)
